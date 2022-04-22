@@ -42,8 +42,8 @@ export const Body = () => {
                     <button onClick={handledOnShowTable} className='w-28 bg-slate-600 h-12 rounded text-white font-medium'>View History</button>
                     {isShowHistory && history.length > 0 &&
                         <div className="relative overflow-x-auto max-h-60">
-                            <table className="w-52 text-sm text-left text-gray-500 dark:text-gray-400 ml-2">
-                                <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                            <table className="w-52 text-sm text-left text-gray-400 ml-2">
+                                <thead className="text-xs uppercase bg-gray-700 text-gray-400">
                                     <tr>
                                         <th scope="col" className="px-6 py-3">
                                             Names searched
@@ -51,7 +51,7 @@ export const Body = () => {
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 flex flex-col">
+                                    <tr className="border-b bg-gray-800 border-gray-700 flex flex-col">
                                         {history.map(item => (
                                             <td className="px-6 py-4">
                                                 {item.data}
@@ -79,8 +79,8 @@ export const Body = () => {
 
             {isShowTable &&
                 <div className="relative overflow-x-auto shadow-md sm:rounded-lg container mx-auto mt-10">
-                    <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                        <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                    <table className="w-full text-sm text-left text-gray-400">
+                        <thead className="text-xs uppercase bg-gray-700 text-gray-400">
                             <tr>
                                 <th scope="col" className="px-6 py-3">
                                     Name
@@ -93,8 +93,8 @@ export const Body = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                                <th scope="row" className="px-6 py-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">
+                            <tr className="border-b bg-gray-800 border-gray-700">
+                                <th scope="row" className="px-6 py-4 font-medium text-white whitespace-nowrap">
                                     {response.name}
                                 </th>
                                 {response.country.map(item => (
