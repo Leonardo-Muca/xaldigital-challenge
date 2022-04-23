@@ -39,7 +39,7 @@ export const Body = () => {
         <>
             <div className='justify-center container mx-auto mt-5 flex flex-row'>
                 <div className='flex-1 flex flex-row'>
-                    <button onClick={handledOnShowTable} className='w-28 bg-slate-600 h-12 rounded text-white font-medium'>View History</button>
+                    <button onClick={handledOnShowTable} className='w-28 bg-slate-600 h-12 rounded text-white font-medium'>{isShowHistory && history.length > 0 ? 'Hide History' : 'View History'}</button>
                     {isShowHistory && history.length > 0 &&
                         <div className="relative overflow-x-auto max-h-60">
                             <table className="w-52 text-sm text-left text-gray-400 ml-2">
